@@ -1,8 +1,139 @@
-<!DOCTYPE html>
 <html>
-   <head>
-   </head>
-   <body>
-      <!-- Write your HTML in this file! -->
-   </body>
-</html>
+  <head>
+    <meta charset="UTF-8">
+    <title>✰WELCOME TO ORINLAND!!!!✰</title>
+    <link href="styles.css" rel="stylesheet">
+    <link href="lightbox.css" rel="stylesheet">
+    <header>
+       <center>
+       <img src="images/orinland.png">
+       </center>
+    </header>
+    <body>
+      <center>
+        <!--MENU-->
+      <!--div class="menu"-->
+        <a href="index.html"><img src="images/home.png" width="200" height="50"></a><img src="images/flower.png" width="50" height="50">   
+        <a href="#about"><img src="images/about.png" width="200" height="50"></a><img src="images/flower.png" width="50" height="50">     
+        <a href="#gallery"><img src="images/gallery.png" width="200" height="50"></a><img src="images/flower.png" width="50" height="50">      
+        <a href="#goodbye"><img src="images/goodbye.png" width="200" height="50"></a>   
+      <!--/div-->
+<div class="imgbody">
+   <main>
+      <article>
+         <div class="mainHeading"><h3>about</h3></div>
+         <a name="about"></a>
+         hello and welcome to orin's magical launchcode funland!
+      </article>
+
+      <article>
+         <h3>gallery of cute cats</h3>
+         <a name="gallery"></a>
+   click the picture to view in gallery mode!
+   <br><br>
+   
+   <img src="images/mewm.jpg"  class="img" onclick="openModal();currentSlide(1)">
+   <img src="images/calico.jpg"  class="img" onclick="openModal();currentSlide(2)">
+   <img src="images/tabby.jpg"  class="img" onclick="openModal();currentSlide(3)">
+   <img src="images/pawker.jpg"  class="img" onclick="openModal();currentSlide(4)">
+   <img src="images/siamese.jpg"  class="img" onclick="openModal();currentSlide(5)">
+
+   <article><h3>goodbye!</h3>
+      <a name="goodbye"></a>
+   <p class="funParagraph">be safe out there! thanks for visiting!</p></article>
+     </div>
+     
+     <!---LIGHTBOX TEST-->
+   
+   <!-- The Modal/Lightbox -->
+   <div id="myModal" class="modal">
+     <span class="close cursor" onclick="closeModal()">&times;</span>
+       <div class="modal-content">
+   <div class="mySlides">
+         <div class="numbertext">1</div>
+         <img src="images/mewm.jpg" class="imgslide"><p><i>michael mewm</i><br>coolest cat on the internet<br>likes tuna and craft beer</p>
+       </div>
+   
+       <div class="mySlides">
+         <div class="numbertext">2</div>
+         <img src="images/calico.jpg" class="imgslide"><p><i>chrysanthemum calico</i><br>2nd coolest cat on the internet<br>really into shoegaze and BBQ</p>
+       </div>
+   
+       <div class="mySlides">
+         <div class="numbertext">3</div>
+         <img src="images/tabby.jpg" class="imgslide"><p><i>thomas tabby</i><br>doesn't use the internet<br>likes to read russian literature</p>
+       </div>
+   
+       <div class="mySlides">
+         <div class="numbertext">4</div>
+         <img src="images/pawker.jpg" class="imgslide"><p><i>peter pawker</i><br>administrator of coolcats.com forums<br>likes to play D&D and sleep</p>
+       </div>
+   
+       <div class="mySlides">
+         <div class="numbertext">5</div>
+         <img src="images/siamese.jpg" class="imgslide"><p><i>sam siamese</i><br>tiktok star<br>lipsynced their way to the top</p>
+       </div>
+       <!-- Next/previous controls -->
+       <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+       <a class="next" onclick="plusSlides(1)">&#10095;</a>
+   
+       <!-- Caption text -->
+       <div class="caption-container">
+         <p id="caption"></p>
+       </div>
+   </div>
+     
+     <!-- LIGHT BOX JAVASCRIPT-->
+     <script>
+   // Open the Modal
+   function openModal() {
+     document.getElementById("myModal").style.display = "block";
+   }
+   
+   // Close the Modal
+   function closeModal() {
+     document.getElementById("myModal").style.display = "none";
+   }
+   
+   var slideIndex = 1;
+   showSlides(slideIndex);
+   
+   // Next/previous controls
+   function plusSlides(n) {
+     showSlides(slideIndex += n);
+   }
+   
+   // Thumbnail image controls
+   function currentSlide(n) {
+     showSlides(slideIndex = n);
+   }
+   
+   function showSlides(n) {
+     var i;
+     var slides = document.getElementsByClassName("mySlides");
+     var dots = document.getElementsByClassName("demo");
+     var captionText = document.getElementById("caption");
+     if (n > slides.length) {slideIndex = 1}
+     if (n < 1) {slideIndex = slides.length}
+     for (i = 0; i < slides.length; i++) {
+       slides[i].style.display = "none";
+     }
+     for (i = 0; i < dots.length; i++) {
+       dots[i].className = dots[i].className.replace(" active", "");
+     }
+     slides[slideIndex-1].style.display = "block";
+     dots[slideIndex-1].className += " active";
+     captionText.innerHTML = dots[slideIndex-1].alt;
+   }
+   </script>
+   </div>
+  </article>
+</main>
+      </center>
+     
+     
+      <center><footer><b>&copy; orin fries 2021, launchcode</b></footer></center>
+     </body>
+    
+  
+   </html>
