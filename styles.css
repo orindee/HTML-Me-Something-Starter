@@ -1,1 +1,70 @@
-/* Write your CSS here! */
+body {
+    background-color: yellow;
+    color: black;
+    font-family: Helvetica, Arial, sans-serif;
+    letter-spacing: 1.3px;
+    font-size: 17px;
+    display: block;
+    margin: 8px;
+   background-image: linear-gradient(45deg, skyblue 25%, transparent 15%), linear-gradient(-45deg, pink 25%, transparent 85%), linear-gradient(45deg, transparent 75%, pink 75%), linear-gradient(-45deg, transparent 75%, pink 75%);
+    background-size: 80px 80px;
+    background-position: 0 0, 0 10px, 10px -10px, -10px 0px;
+  }
+  
+  .header {
+   position: fixed; 
+   width: 100%;
+   padding: 25px 0px;
+   margin-top: -10px; 
+   background-color: yellow;
+  }
+
+  .mainHeading{
+      color: red;
+  }
+  
+  .funParagraph {
+      color: green;
+  }
+
+  /*IMAGES IN BODY OF PAGE*/
+  .imgbody {
+    border-radius: 25px;
+    border: 4px solid black;
+    background:skyblue;
+    opacity: 85%;
+    padding: 10px;
+    width: 55%;
+  }
+  
+  .testP {
+    width: 40%;
+    margin: auto;
+  }
+  
+  /*LINK STYLING*/
+  
+  /* unvisited link */
+  a:link {
+    color: black;
+      text-decoration: none;
+  }
+  
+  /* visited link */
+  a:visited {
+    color: black;
+      text-decoration: none;
+  }
+  
+  /* mouse over link */
+  a:hover {
+    color: black;
+      text-decoration: underline;
+      cursor: crosshair;
+  }
+  
+  /* selected link */
+  a:active {
+    color: black;
+      text-decoration: none;
+  }
